@@ -1,0 +1,16 @@
+@import "tailwindcss";
+@import "./globals.css";
+
+@layer components {
+  .heading-1 {
+    @apply text-xl text-titulos font-bold leading-tight;
+  }
+
+  .heading-2 {
+    @apply text-lg text-titulos font-extrabold;
+  }
+
+  .body-text {
+    @apply text-base text-textos leading-snug text-justify;
+  }
+}

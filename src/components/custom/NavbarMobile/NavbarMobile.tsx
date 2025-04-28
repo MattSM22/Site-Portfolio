@@ -5,7 +5,7 @@ import { X, Menu } from "lucide-react";
 import Link from "next/link";
 import clsx from "clsx";
 import Image from "next/image";
-import Logo from "../../../../public/minhalogo.svg"
+import Logo from "@/assets/minhalogo.svg"
 
 export default function MobileMenu() {
   const [isOpen, setIsOpen] = useState(false);

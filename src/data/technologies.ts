@@ -1,10 +1,10 @@
-import Next from "../../public/devIcons/next.svg"
-import React from "../../public/devIcons/react.svg"
-import Typescript from "../../public/devIcons/typescript.svg"
-import HTML5 from "../../public/devIcons/html.svg"
-import CSS3 from "../../public/devIcons/css.svg"
-import Tailwind from "../../public/devIcons/tailwind.svg"
-import Figma from "../../public/devIcons/figma.svg"
+import Next from "@/assets/devIcons/next.svg"
+import React from "@/assets/devIcons/react.svg"
+import Typescript from "@/assets/devIcons/typescript.svg"
+import HTML5 from "@/assets/devIcons/html.svg"
+import CSS3 from "@/assets/devIcons/css.svg"
+import Tailwind from "@/assets/devIcons/tailwind.svg"
+import Figma from "@/assets/devIcons/figma.svg"
 
 interface TechnologiesTypes {
   id: number;

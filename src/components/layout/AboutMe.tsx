@@ -1,13 +1,13 @@
 "use client";
 
 import Image, { type StaticImageData } from "next/image";
-import Bubbles from "../../../public/Bubbles.svg";
-import Content from "../ui/aboutMeContent/Content";
+import Bubbles from "@/assets/Bubbles.svg";
+import Content from "@/components/ui/aboutMeContent/Content";
 
 import { Contents } from "@/data/Contents";
 import { useEffect, useState } from "react";
 import { useIsMobile } from "@/hooks/useIsMobile";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../ui/carousel/carousel";
+import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel/carousel";
 
 type Content = {
   id: number;
@@ -32,7 +32,7 @@ export default function AboutMe({ id }: AboutMeProps) {
   return (
     <section
       id={id}
-      className="relative max-h-fit bg-background-2 flex flex-col items-center gap-20 pb-40 max-sm:px-10 max-sm:py-20 max-sm:min-h-screen"
+      className="relative max-h-fit bg-background-2 flex flex-col items-center gap-20 pb-40 max-md:px-10 max-md:py-20 max-md:min-h-screen"
     >
       {isMobile ? (
         <Carousel className="w-full max-w-md mx-auto">

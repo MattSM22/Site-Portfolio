@@ -1,9 +1,9 @@
 'use client'
 
 import Image from "next/image";
-import Waves from "../../../public/Waves.svg";
+import Waves from "@/assets/Waves.svg";
 import { Download } from "lucide-react";
-import { Botao } from "../ui/botao";
+import { Botao } from "@/components/ui/botao";
 
 interface HomeSectionProps {
   id?: string

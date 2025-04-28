@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Minhalogo from "../../../public/minhalogo.svg";
+import Minhalogo from "@/assets/minhalogo.svg";
 import Link from "next/link";
 
 export default function Navbar() {

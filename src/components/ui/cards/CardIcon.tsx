@@ -15,7 +15,7 @@ export default function CardIcon({ title, icon: Icon }:  CardIconProps) {
         width={50}
         height={50}
       />
-      <label className="text-xl font-bold text-titulos">{title}</label>
+      <label className="heading-2 sm:text-sm md:text-md lg:text-lg">{title}</label>
     </div>
   );
 }

@@ -5,14 +5,14 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "../ui/carousel/carousel";
+} from "@/components/ui/carousel/carousel";
 import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
-} from "../shadcn/ui/accordion";
+} from "@/components/shadcn/ui/accordion";
 
 interface ExperiencesProps {
   id?: string;

@@ -1,5 +1,6 @@
 import { Poppins } from "@next/font/google";
-import "./globals.css";
+import "@/styles/globals.css";
+import "@/styles/_typograph.css";
 import Head from "next/head";
 
 export const poppins = Poppins({

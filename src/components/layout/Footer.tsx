@@ -1,8 +1,8 @@
 import Image from "next/image";
-import LinkedIn from "../../../public/socialMedia/linkedin.svg";
-import Instagram from "../../../public/socialMedia/instagram.svg";
-import Github from "../../../public/socialMedia/github.svg";
-import Gmail from "../../../public/socialMedia/gmail.svg";
+import LinkedIn from "@/assets/socialMedia/linkedin.svg";
+import Instagram from "@/assets/socialMedia/instagram.svg";
+import Github from "@/assets/socialMedia/github.svg";
+import Gmail from "@/assets/socialMedia/gmail.svg";
 
 const socialIcons = [
   { src: LinkedIn, alt: "LinkedIn", link: "https://www.linkedin.com/in/mattsm-dev/" },

@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
-import BlopRightBottom from "../../../public/BlopRightBottom.svg";
-import BlopLeftTop from "../../../public/BlopLeftTop.svg";
+import BlopRightBottom from "@/assets/BlopRightBottom.svg";
+import BlopLeftTop from "@/assets/BlopLeftTop.svg";
 import { useEffect, useState } from "react";
 import { Card } from "@/components/ui/cards";
 import { technologiesArray } from "@/data/technologies";
@@ -10,7 +10,7 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-} from "../ui/carousel/carousel";
+} from "@/components/ui/carousel/carousel";
 
 type Technologies = {
   id: number;

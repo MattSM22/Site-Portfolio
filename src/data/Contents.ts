@@ -1,6 +1,6 @@
 import type { StaticImageData } from "next/image";
-import MinhaFoto from "../../public/minha foto.png";
-import Hobbies from "../../public/Hobbies.svg";
+import MinhaFoto from "@/assets/minha foto.png";
+import Hobbies from "@/assets/Hobbies.svg";
 
 interface Contents {
   id: number;

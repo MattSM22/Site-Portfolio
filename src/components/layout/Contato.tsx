@@ -1,8 +1,8 @@
 'use client';
 import { useState } from "react";
-import Input from "../ui/input/Input";
-import InputButton from "../ui/inputButton/InputButton";
-import Textarea from "../ui/textarea/Textarea";
+import Input from "@/components/ui/input/Input";
+import InputButton from "@/components/ui/inputButton/InputButton";
+import Textarea from "@/components/ui/textarea/Textarea";
 
 interface ContatoProps {
   id?: string;
