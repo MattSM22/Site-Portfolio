@@ -5,7 +5,6 @@ interface InputButtonProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
 export default function InputButton({
   value,
-  icon: Icon,
   ...rest
 }: InputButtonProps) {
   return (

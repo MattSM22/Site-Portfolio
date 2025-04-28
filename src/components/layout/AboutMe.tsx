@@ -27,7 +27,7 @@ export default function AboutMe({ id }: AboutMeProps) {
 
   useEffect(() => {
     setContent(Contents);
-  }, [Contents]);
+  }, []);
 
   return (
     <section

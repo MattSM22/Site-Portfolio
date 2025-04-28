@@ -29,7 +29,7 @@ export default function Technologies({ id: IdSection }: TechnologiesProps) {
 
   useEffect(() => {
     setTechnologies(technologiesArray);
-  }, [technologiesArray]);
+  }, []);
 
   return (
     <section

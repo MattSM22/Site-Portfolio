@@ -9,7 +9,7 @@ export async function POST(req: Request) {
   console.log(process.env.RESEND_API_KEY);
 
   try {
-    const { data, error } = await resend.emails.send({
+    const { error } = await resend.emails.send({
       from: 'Meu Portfolio <onboarding@resend.dev>',
       to: 'mattdev267@gmail.com',
       subject: `Novo contato de ${name}`,

@@ -19,7 +19,7 @@ export function useIsMobile(breakpoint: Breakpoint = "md") {
 
     const handleResize = () => setIsMobile(mediaQuery.matches);
 
-    handleResize(); // Checa já na montagem
+    handleResize();
     mediaQuery.addEventListener("change", handleResize);
 
     return () => mediaQuery.removeEventListener("change", handleResize);
