@@ -7,17 +7,12 @@ import Technologies from "@/components/layout/Technologies";
 import Experiencies from "@/components/layout/Experiencies";
 import Contato from "@/components/layout/Contato";
 import Footer from "@/components/layout/Footer";
-
 import { ArrowUp } from "lucide-react";
-import { useIsMobile } from "@/hooks/useIsMobile";
-import NavbarMobile from "@/components/custom/NavbarMobile/NavbarMobile";
 
 export default function Home() {
-  const isMobile = useIsMobile();
-
   return (
-    <main className="relative">
-      {isMobile ? (<NavbarMobile />) : (<Navbar />)}
+    <main>
+      <Navbar />
       <HomeSection id="home" />
       <AboutMe id="about-me" />
       <Technologies id="technologies" />
@@ -25,15 +20,15 @@ export default function Home() {
       <Contato id="contato" />
       <Footer />
       <button
-        className="fixed bottom-0 right-0 z-50 m-4 p-3 bg-slate-800 
-                  rounded-full focus:ring-2 focus:ring-blue-300 focus:outline-none hover:bg-slate-700 
-                  transition-colors duration-300 ease-in-out cursor-pointer"
+        className="fixed bottom-4 right-4 z-60 p-3 md:p-4 bg-slate-800 rounded-full 
+             focus:ring-2 focus:ring-blue-300 focus:outline-none hover:bg-slate-700 
+             transition-colors duration-300 ease-in-out cursor-pointer shadow-lg"
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         aria-label="Voltar ao topo"
         title="Voltar ao topo"
       >
         <ArrowUp
-          className="h-6 w-6 text-blue-300"
+          className="h-6 w-6 md:h-7 md:w-7 text-blue-300"
           aria-hidden="true"
           focusable="false"
         />

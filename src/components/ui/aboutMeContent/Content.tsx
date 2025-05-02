@@ -9,10 +9,10 @@ interface ContentProps {
 
 export default function Content({ titulo, conteudo, imagem, alt }: ContentProps) {
   return (
-    <article className="flex flex-col-reverse max-md:flex-row items-center justify-center gap-10 max-w-[1170px] px-4 py-10">
-      <div className="flex flex-col gap-4 text-center md:text-left">
-        <h3 className="heading-1 sm:text-lg md:text-xl lg:text-2xl">{titulo}</h3>
-        <p className="body-text text-justify md:text-left">
+    <article className="flex flex-row items-center justify-center gap-8 max-w-[800px] px-4 py-10 max-md:flex-col-reverse">
+      <div className="flex flex-col gap-4 text-center">
+        <h3 className="text-xl text-titulos font-bold leading-tight sm:text-lg md:text-xl lg:text-2xl">{titulo}</h3>
+        <p className="text-base text-textos leading-snug text-justify">
           {conteudo}
         </p>
       </div>

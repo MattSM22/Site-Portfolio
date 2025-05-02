@@ -62,14 +62,14 @@ export default function Contato({ id }: ContatoProps) {
   return (
     <section
       id={id}
-      className="min-h-fit w-full px-4 py-6 bg-background-2 flex flex-col items-center justify-start gap-4 sm:px-6 md:px-30 lg:px-20"
+      className="min-h-fit max-w-screen px-4 py-6 bg-background-2 flex flex-col items-center justify-start gap-4 lg:px-20"
     >
       <h1 className="text-4xl text-titulos font-bold text-center">Contato</h1>
       <span className="text-xl text-textos font-light text-center">
         Vamos falar sobre algo?
       </span>
 
-      <form onSubmit={handleSubmit} className="w-full max-sm:w-md flex flex-col justify-center items-center gap-4">
+      <form onSubmit={handleSubmit} className="w-full flex flex-col justify-center items-center gap-4">
         <Input 
           label="Nome" 
           type="text"

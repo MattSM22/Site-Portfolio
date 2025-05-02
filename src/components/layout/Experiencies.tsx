@@ -6,7 +6,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel/carousel";
-import { useIsMobile } from "@/hooks/useIsMobile";
 import {
   Accordion,
   AccordionContent,
@@ -19,62 +18,77 @@ interface ExperiencesProps {
 }
 
 export default function Experiencies({ id }: ExperiencesProps) {
-  const isMobile = useIsMobile("sm");
   return (
     <section
       id={id}
-      className="min-h-fit bg-background-2 flex flex-col gap-4 items-center justify-start md:px-30"
+      className="min-h-screen w-full bg-background-2 flex flex-col gap-6 items-center justify-start px-6 md:px-12 lg:px-20 py-16"
     >
-      <h1 className="text-4xl text-titulos font-bold">Experiências</h1>
-      <span className="text-xl text-textos font-light">
+      <h1 className="text-3xl sm:text-4xl text-titulos font-bold text-center">
+        Experiências
+      </h1>
+      <span className="text-lg sm:text-xl text-textos font-light text-center">
         Minha trajetória...
       </span>
-      <div className="bg-background border-2 border-bordas rounded-xl max-h-[1080px] max-w-[750px] p-5 flex flex-col gap-2">
-        {isMobile ? (
+
+      <div className="bg-background border-2 border-bordas rounded-xl w-full max-w-3xl p-5 flex flex-col gap-4">
+        {/* Accordion no mobile */}
+        <div className="block md:hidden">
           <Accordion type="single" collapsible>
-            {experiencesArray.map((experiences) => (
-              <AccordionItem key={experiences.id} value={`item-${experiences.id}`}>
+            {experiencesArray.map((experience) => (
+              <AccordionItem
+                key={experience.id}
+                value={`item-${experience.id}`}
+              >
                 <AccordionTrigger>
-                  <div>
-                    <h3 className="text-lg font-semibold">
-                      {experiences.empresa}
+                  <div className="flex flex-col text-left">
+                    <h3 className="text-base font-semibold text-titulos">
+                      {experience.empresa}
                     </h3>
-                    <h4 className="text-md font-light">
-                      {experiences.cargo}
+                    <h4 className="text-sm font-light text-textos">
+                      {experience.cargo}
                     </h4>
                     <span className="text-xs text-muted-foreground">
-                      {experiences.periodo}
+                      {experience.periodo}
                     </span>
                   </div>
                 </AccordionTrigger>
-                <AccordionContent>{experiences.descricao}</AccordionContent>
+                <AccordionContent>
+                  <p className="text-sm text-textos text-justify">
+                    {experience.descricao}
+                  </p>
+                </AccordionContent>
               </AccordionItem>
             ))}
           </Accordion>
-        ) : (
+        </div>
+
+        {/* Carousel no tablet e desktop */}
+        <div className="hidden md:block">
           <Carousel>
             <CarouselContent>
-              {experiencesArray.map((experiences) => (
-                <CarouselItem key={experiences.id}>
-                  <h3 className="text-2xl text-titulos font-bold">
-                    {experiences.cargo}
-                  </h3>
-                  <span className="text-sm text-legendas font-light">
-                    {experiences.empresa}
-                  </span>
-                  <span className="text-sm text-legendas font-light">
-                    {experiences.periodo}
-                  </span>
-                  <p className="text-xl text-textos font-light text-justify">
-                    {experiences.descricao}
-                  </p>
+              {experiencesArray.map((experience) => (
+                <CarouselItem key={experience.id}>
+                  <div className="flex flex-col gap-2">
+                    <h3 className="text-2xl text-titulos font-bold">
+                      {experience.cargo}
+                    </h3>
+                    <span className="text-md text-legendas font-light">
+                      {experience.empresa}
+                    </span>
+                    <span className="text-sm text-legendas font-light">
+                      {experience.periodo}
+                    </span>
+                    <p className="text-base text-textos font-light text-justify mt-2">
+                      {experience.descricao}
+                    </p>
+                  </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
             <CarouselPrevious />
             <CarouselNext />
           </Carousel>
-        )}
+        </div>
       </div>
     </section>
   );

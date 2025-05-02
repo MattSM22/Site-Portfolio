@@ -13,4 +13,8 @@
   .body-text {
     @apply text-base text-textos leading-snug text-justify;
   }
+
+  .text-links {
+    @apply text-xs text-textos;
+  }
 }

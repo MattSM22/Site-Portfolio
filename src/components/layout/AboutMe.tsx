@@ -6,10 +6,9 @@ import Content from "@/components/ui/aboutMeContent/Content";
 
 import { Contents } from "@/data/Contents";
 import { useEffect, useState } from "react";
-import { useIsMobile } from "@/hooks/useIsMobile";
 import { Carousel, CarouselContent, CarouselItem } from "@/components/ui/carousel/carousel";
 
-type Content = {
+type ContentType = {
   id: number;
   titulo: string;
   conteudo: string;
@@ -22,8 +21,7 @@ interface AboutMeProps {
 }
 
 export default function AboutMe({ id }: AboutMeProps) {
-  const isMobile = useIsMobile("md");
-  const [content, setContent] = useState<Content[]>([]);
+  const [content, setContent] = useState<ContentType[]>([]);
 
   useEffect(() => {
     setContent(Contents);
@@ -32,37 +30,42 @@ export default function AboutMe({ id }: AboutMeProps) {
   return (
     <section
       id={id}
-      className="relative max-h-fit bg-background-2 flex flex-col items-center gap-20 pb-40 max-md:px-10 max-md:py-20 max-md:min-h-screen"
+      className="relative w-full bg-background-2 flex flex-col items-center gap-16 px-6 md:px-12 lg:px-20 py-16"
     >
-      {isMobile ? (
-        <Carousel className="w-full max-w-md mx-auto">
+      {/* Carousel no mobile */}
+      <div className="block md:hidden w-full">
+        <Carousel className="w-full">
           <CarouselContent>
-            {content.map((contents) => (
-              <CarouselItem key={contents.id}>
+            {content.map((item) => (
+              <CarouselItem key={item.id}>
                 <Content  
-                  titulo={contents.titulo}
-                  conteudo={contents.conteudo}
-                  imagem={contents.imagem}
-                  alt={contents.alt}
+                  titulo={item.titulo}
+                  conteudo={item.conteudo}
+                  imagem={item.imagem}
+                  alt={item.alt}
                 />
               </CarouselItem>
             ))}
           </CarouselContent>
         </Carousel>
-      ) : (
-        content.map((contents) => (
-          <Content
-            key={contents.id}
-            titulo={contents.titulo}
-            conteudo={contents.conteudo}
-            imagem={contents.imagem}
-            alt={contents.alt}
-          />
-        ))
-      )}
+      </div>
 
+      {/* Lista no tablet/desktop */}
+      <div className="hidden md:flex flex-col gap-12 w-full max-w-6xl justify-center items-center">
+        {content.map((item) => (
+          <Content
+            key={item.id}
+            titulo={item.titulo}
+            conteudo={item.conteudo}
+            imagem={item.imagem}
+            alt={item.alt}
+          />
+        ))}
+      </div>
+
+      {/* Bolhas decorativas (desktop) */}
       <Image
-        className="absolute -z-0 max-sm:h-screen"
+        className="absolute -z-0 hidden md:block w-[400px] lg:w-[600px] bottom-0 right-0 opacity-50"
         src={Bubbles}
         alt="Bolhas para o fundo da página"
       />

@@ -16,10 +16,10 @@ const contactIcons = [
 
 export default function Footer() {
   return (
-    <footer className="bg-modais text-background p-6 rounded-t-2xl flex flex-col max-md:flex-row items-start gap-6 text-sm">
-      
+    <footer className="w-full bg-modais text-background px-6 py-8 rounded-t-2xl flex flex-col md:flex-row items-start gap-6 text-sm">
+
       {/* Coluna Social */}
-      <div className="flex flex-col gap-3 border-b max-md:border-b-0 max-md:border-r-2 border-bordas pr-0 max-md:pr-6">
+      <div className="flex flex-col gap-3 border-b-2 md:border-b-0 md:border-r-2 md:pr-3 border-bordas pb-4 md:pb-0 w-full md:w-auto">
         <h3 className="text-lg font-bold">Social</h3>
         <div className="flex gap-4">
           {socialIcons.map((icon, index) => (
@@ -31,7 +31,7 @@ export default function Footer() {
       </div>
 
       {/* Coluna Contato */}
-      <div className="flex flex-col gap-3 border-b max-md:border-b-0 max-md:border-r-2 border-bordas px-0 max-md:px-6">
+      <div className="flex flex-col gap-3 border-b-2 md:border-b-0 md:border-r-2 md:pr-3 border-bordas pb-4 md:pb-0 w-full md:w-auto">
         <h3 className="text-lg font-bold">Contato</h3>
         <div className="flex gap-4">
           {contactIcons.map((icon, index) => (
@@ -43,13 +43,13 @@ export default function Footer() {
       </div>
 
       {/* Coluna Políticas */}
-      <div className="flex flex-col gap-2 pl-0 max-md:pl-6">
+      <div className="flex flex-col gap-2 w-full md:w-auto">
         <h3 className="text-lg font-bold">Políticas</h3>
         <p className="text-sm text-background">
           Todos os direitos reservados para Matheus S. Magalhães
         </p>
       </div>
-      
+
     </footer>
   );
 }
